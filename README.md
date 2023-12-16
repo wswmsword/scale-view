@@ -58,10 +58,20 @@ percentage(number, [unit]);
 
 ```javascript
 import { centre } from "scale-view";
-centre(number, [unit]);
+centre(number, unit);
 ```
 
 转换用于 left 和 right 属性的值，属性所在元素的包含块应是浏览器窗口，转换使 left 和 right 属性基于 `idealWidth` 所在的视图，而不是浏览器窗口，并且受到 `maxWidth` 的限制。`number` 表示值的大小，`unit` 表示单位，必填，需传入 `"vw"`、`"px"` 或 `"px"`。
+
+## 范例
+
+进入 `examples` 文件夹后，运行项目，本地查看项目：
+
+```bash
+cd examples/react
+npm i
+npm run start
+```
 
 ## 单元测试与参与开发
 
