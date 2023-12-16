@@ -1,6 +1,6 @@
 {
   "name": "scale-view",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "output/scale-view.js",
   "module": "output/scale-view.esm.js",
