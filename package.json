@@ -1,0 +1,63 @@
+{
+  "name": "scale-view",
+  "version": "0.0.1",
+  "description": "",
+  "main": "output/scale-view.js",
+  "module": "output/scale-view.esm.js",
+  "files": [
+    "package.json",
+    "output",
+    "index.js",
+    "utils.js",
+    "index.d.ts",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./output",
+    "compile:esm": "BUILD_ENV=esm BABEL_ENV=esm rollup -c",
+    "compile:cjs": "BUILD_ENV=cjs BABEL_ENV=es5 rollup -c",
+    "compile:umd": "BUILD_ENV=umd BABEL_ENV=es5 rollup -c",
+    "compile": "npm run compile:esm && npm run compile:cjs && npm run compile:umd",
+    "test": "mocha index.spec.js"
+  },
+  "types": "index.d.ts",
+  "keywords": [
+    "css",
+    "scalable-interface",
+    "max-vw",
+    "clamp-vw",
+    "units",
+    "pixel",
+    "px",
+    "viewport",
+    "postcss-mobile-forever",
+    "mobile",
+    "desktop",
+    "mobile-first",
+    "css-scale"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wswmsword/scale-view.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wswmsword/scale-view/issues"
+  },
+  "homepage": "https://github.com/wswmsword/scale-view#readme",
+  "author": "wswmsword",
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.6",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "mocha": "^10.2.0",
+    "rollup": "^4.9.0"
+  }
+}
