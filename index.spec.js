@@ -109,6 +109,10 @@ describe("Centre Transformation", function () {
       const result = centre(750, "px");
       const expect = "calc(50% - max(-300px, -50%))";
       assert.equal(result, expect);
+
+      const result2 = centre(301, "px");
+      const expect2 = "calc(50% - min(59.2px, 9.867%))";
+      assert.equal(result2, expect2);
     });
     it("value less than half of ideal width", function () {
       const result = centre(0, "px");
@@ -117,7 +121,7 @@ describe("Centre Transformation", function () {
     });
     it("value is equal to half of ideal width", function() {
       const result = centre(375, "px");
-      const expect = 'calc(50% - max(0px, 0%))';
+      const expect = 'calc(50% - min(0px, 0%))';
       assert.equal(result, expect);
     });
   });

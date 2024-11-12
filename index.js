@@ -65,9 +65,9 @@ function centre(n, unit) {
   if (!(["vw", "%", "px"].includes(unit))) return `${n}${unit}`;
 
   if (unit === "px") {
-    const calc = 50 - round(n * 100 / idealWidth);
+    const calc = round(50 - n * 100 / idealWidth);
     const calc2 = round(maxWidth / 2 - n * radio);
-    const cssF = n > maxWidth / 2 ? "max" : "min";
+    const cssF = n > idealWidth / 2 ? "max" : "min";
     return `calc(50% - ${cssF}(${calc2}px, ${calc}%))`;
   }
 

@@ -1,7 +1,7 @@
 {
   "name": "scale-view",
   "version": "1.0.3",
-  "description": "",
+  "description": "To adapt different displays by one mobile viewport.",
   "main": "output/scale-view.js",
   "module": "output/scale-view.esm.js",
   "files": [
